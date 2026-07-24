@@ -1,5 +1,10 @@
 # Collab Project — ML for Cloud & Collaboration
 
+[![CI](https://github.com/febriyansyahresearch-lab/collab-project/actions/workflows/test.yml/badge.svg)](https://github.com/febriyansyahresearch-lab/collab-project/actions)
+[![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/)
+[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+[![Tests](https://img.shields.io/badge/tests-20%20passed-brightgreen)](projects/)
+
 **Febriyansyah** — MTI, IT Security Leader (15+ yrs, Banking)
 
 Collaborative ML workspace designed for Google Colab, VS Code, and GitHub Codespaces.
@@ -23,6 +28,22 @@ pip install -r requirements.txt
 
 ```bash
 python -m pytest projects/ -v
+```
+
+## Usage
+
+```bash
+# NLP: train text classifier (TF-IDF + Naive Bayes, Logistic, SVM)
+python -m projects.nlp.src.train
+
+# Image: train shape classifier (RF, MLP)
+python -m projects.image.src.train
+
+# Time Series: forecast with trend + seasonality
+python -m projects.timeseries.src.train
+
+# Recommender: user-based collaborative filtering
+python -m projects.recommender.src.recommend
 ```
 
 ## Colab Ready
