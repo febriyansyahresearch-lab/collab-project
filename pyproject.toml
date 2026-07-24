@@ -1,0 +1,9 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "collab-project"
+version = "1.0.0"
+description = "Collaborative ML workspace for Colab, VS Code, and GitHub Codespaces"
+requires-python = ">=3.10"
