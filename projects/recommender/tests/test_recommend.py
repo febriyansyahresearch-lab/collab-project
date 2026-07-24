@@ -10,6 +10,8 @@ def test_recommend_returns_recommendations():
 
 
 def test_build_user_item_matrix_shape():
-    ratings = generate_ratings(10, 5)
-    matrix = build_user_item_matrix(ratings, 10, 5)
-    assert matrix.shape == (10, 5)
+    ratings = generate_ratings(10, 8)
+    n_users = ratings["user_id"].nunique()
+    n_items = ratings["item_id"].nunique()
+    matrix = build_user_item_matrix(ratings, n_users, n_items)
+    assert matrix.shape == (10, 8)
