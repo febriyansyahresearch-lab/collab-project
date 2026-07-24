@@ -1,0 +1,15 @@
+import pytest
+from projects.nlp.src.train import train
+
+
+def test_train_returns_results():
+    results = train()
+    assert "naive_bayes" in results
+    assert "logistic" in results
+    assert "svm" in results
+
+
+def test_train_accuracy_above_baseline():
+    results = train()
+    for m in results.values():
+        assert m["accuracy"] > 0.3
